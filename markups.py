@@ -1,0 +1,46 @@
+from telebot import types
+
+start_markup = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
+start_markup_btn1 = types.KeyboardButton('Привет')
+start_markup.add(start_markup_btn1)
+
+whattodo_markup = types.ReplyKeyboardMarkup(row_width=2, resize_keyboard=True)
+whattodo_markup_btn1 =  types.KeyboardButton('Хочу еще анекдот')
+whattodo_markup_btn2 =  types.KeyboardButton('Мне от тебя ничего не надо')
+whattodo_markup.add(whattodo_markup_btn1, whattodo_markup_btn2)
+
+source_markup = types.ReplyKeyboardMarkup(row_width=2, resize_keyboard=True)
+source_markup_btn1 = types.KeyboardButton('Лучшие')
+source_markup_btn2 = types.KeyboardButton('По категориям')
+source_markup.add(source_markup_btn1, source_markup_btn2)
+
+category_markup = types.ReplyKeyboardMarkup(row_width=3, resize_keyboard=True)
+category_markup_btn1 =  types.KeyboardButton('Василий Иваныч и Петька')
+category_markup_btn2 =  types.KeyboardButton('в баре, кафе, ресторане, больнице')
+category_markup_btn3 =  types.KeyboardButton('общественный транспорт')
+category_markup_btn4 =  types.KeyboardButton('об адвокатах и судьях')
+category_markup_btn5 =  types.KeyboardButton('про актеров и актрис')
+category_markup_btn6 =  types.KeyboardButton('животные')
+category_markup_btn7 =  types.KeyboardButton('о браке')
+category_markup_btn8 =  types.KeyboardButton('армия')
+category_markup_btn9 =  types.KeyboardButton('о Вовочке')
+category_markup_btn10 =  types.KeyboardButton('о жизни')
+category_markup.row(category_markup_btn1, category_markup_btn2, category_markup_btn3)
+category_markup.row(category_markup_btn4, category_markup_btn5, category_markup_btn6)
+category_markup.row(category_markup_btn7, category_markup_btn8, category_markup_btn9)
+category_markup.row(category_markup_btn10)
+
+
+raiting_markup = types.ReplyKeyboardMarkup(row_width=3, resize_keyboard=True)
+raiting_markup_btn1 =  types.KeyboardButton('1')
+raiting_markup_btn2 =  types.KeyboardButton('2')
+raiting_markup_btn3 =  types.KeyboardButton('3')
+raiting_markup_btn4 =  types.KeyboardButton('4')
+raiting_markup_btn5 =  types.KeyboardButton('5')
+raiting_markup.row(raiting_markup_btn1, raiting_markup_btn2, raiting_markup_btn3)
+raiting_markup.row(raiting_markup_btn4, raiting_markup_btn5)
+
+yes_or_no_markup = types.ReplyKeyboardMarkup(row_width=2, resize_keyboard=True)
+yes_or_no_markup_btn1 = types.KeyboardButton('да')
+yes_or_no_markup_btn2 = types.KeyboardButton('нет')
+yes_or_no_markup.add(yes_or_no_markup_btn1, yes_or_no_markup_btn2)
